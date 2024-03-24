@@ -17,19 +17,11 @@ def check_code(code):
         return False
 
 def generate_and_check_codes(num_of_codes, mode='normal'):
-    codes = []
     for _ in range(num_of_codes):
         code = generate_code()
-        codes.append(code)
-        if mode == 'normal':
-            print(f"Kod üretildi: {code}")
-            time.sleep(1)  # Normal modda bir saniye bekleme
-        elif mode == 'orta hız':
-            print(f"Kod üretildi: {code}")
-            time.sleep(0.5)  # Orta hız modunda 0.5 saniye bekleme
-    
-    print("\nKodlar kontrol ediliyor...\n")
-    for code in codes:
+        print(f"Kod üretildi: {code}")
+        time.sleep(1 if mode == 'normal' else 0.5)  # Bekleme süresi
+
         if check_code(code):
             print(f"{code} geçerli.")
         else:
