@@ -1,5 +1,5 @@
 print("Owned By Emin INC.")
-print("Robux redeem code Generator and Chacker")
+print("Robux Redeem Code Generator and Chacker 1.0")
 import random
 import string
 import requests
